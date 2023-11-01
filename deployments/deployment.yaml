@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: dummies-deployment
   labels:
-    app: my-nginx-deployment
+    app: my-dummies-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: my-nginx-pod
+      app: my-dummies-pod
   template:
     metadata:
       labels:
-        app: my-nginx-pod
+        app: my-dummies-pod
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: dummies
+        image: selmeczib/dummies:4
         ports:
-        - containerPort: 80
+        - containerPort: 8080
