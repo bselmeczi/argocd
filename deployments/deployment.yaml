@@ -19,3 +19,9 @@ spec:
         image: selmeczib/dummies:4
         ports:
         - containerPort: 8080
+        env:
+        - name: GREETING_MESSAGE
+          valueFrom:
+            configMapKeyRef:
+              name: greeting-config
+              key: greeting
