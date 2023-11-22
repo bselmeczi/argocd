@@ -5,7 +5,7 @@ metadata:
   labels:
     app: my-dummies-deployment
 spec:
-  replicas: 1
+  replicas: 7
   selector:
     matchLabels:
       app: my-dummies-pod
